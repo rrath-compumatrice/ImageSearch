@@ -8,6 +8,7 @@
 
 #import "ImageSearchSharedClient.h"
 #import "SearchImageDetails.h"
+#import "Constants.h"
 
 @implementation ImageSearchSharedClient
 static NSString * const kImageSearchSharedAPIBaseURLString = @"https://itunes.apple.com/search?term=";
@@ -38,8 +39,7 @@ static NSString * const kImageSearchSharedAPIBaseURLString = @"https://itunes.ap
 
 -(void)searchImage:(NSString*)param success:(ISSuccessBlock)success failure:(ISFailureBlock)failure{
     
-    NSString *baseUrl = @"https://itunes.apple.com/search?term=";
-    [[ImageSearchSharedClient sharedClient] GET:[baseUrl stringByAppendingString:param] parameters:nil success:^(NSURLSessionDataTask * operation, id   responseObject) {
+    [[ImageSearchSharedClient sharedClient] GET:[imageSearchAPI stringByAppendingString:param] parameters:nil success:^(NSURLSessionDataTask * operation, id   responseObject) {
         
         NSArray *response = [responseObject valueForKeyPath:@"results"];
         NSMutableArray *imageArray = [NSMutableArray arrayWithCapacity:response.count];
@@ -69,17 +69,22 @@ static NSString * const kImageSearchSharedAPIBaseURLString = @"https://itunes.ap
 }
 
 -(void)getLyrics:(NSString*)param success:(ISSuccessBlock)success failure:(ISFailureBlock)failure{
-    NSString *baseUrl = @"http://lyrics.wikia.com/api.php?func=getSong&artist=Tom+Waits&song=new+coat+of+paint&fmt=json";
-   // [self.responseSerializer setAcceptableContentTypes:[NSSet setWithArray:@[@"application/json"]]];
-     self.requestSerializer = [AFJSONRequestSerializer serializer];
-    [[ImageSearchSharedClient sharedClient] GET:baseUrl parameters:nil success:^(NSURLSessionDataTask * operation, id   responseObject) {
+
+    [self.responseSerializer setAcceptableContentTypes:[NSSet setWithArray:@[@"application/json"]]];
+    self.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    [[ImageSearchSharedClient sharedClient] GET:getLyricsAPI parameters:nil success:^(NSURLSessionDataTask * operation, id   responseObject) {
         
-        NSArray *response = [responseObject valueForKeyPath:@"results"];
-        NSMutableArray *imageArray = [NSMutableArray arrayWithCapacity:response.count];
-        
-        success(operation, imageArray);
-        
-        
+        NSError *error = nil;
+        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:&error];
+        if (error) {
+            NSLog(@"Error serializing %@", error);
+        }else{
+            NSLog(@"JSON Dict %@", JSON);
+            NSArray *response = [responseObject valueForKeyPath:@"song"];
+            NSMutableArray *imageArray = [NSMutableArray arrayWithCapacity:response.count];
+            success(operation, imageArray);
+        }
     } failure:^(NSURLSessionDataTask *operation, NSError *error) {
         failure(operation, error);
     }];

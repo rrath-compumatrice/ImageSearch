@@ -20,6 +20,8 @@
 		7C4056D31E42C57300443F96 /* SearchImageDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056D21E42C57300443F96 /* SearchImageDetails.m */; };
 		7C4056D91E43862500443F96 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056D81E43862500443F96 /* DetailViewController.m */; };
 		7C4056DC1E438B7600443F96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4056DA1E438B7600443F96 /* Main.storyboard */; };
+		7C4056DF1E43B46200443F96 /* Placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4056DE1E43B46200443F96 /* Placeholder@2x.png */; };
+		7C4056E31E43B5F100443F96 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056E21E43B5F100443F96 /* Constants.m */; };
 		ED259CC3BD8956447E82339A /* libPods-ImageSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DC02EE74461123036B27FE /* libPods-ImageSearch.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,9 @@
 		7C4056D71E43862500443F96 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7C4056D81E43862500443F96 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7C4056DB1E438B7600443F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C4056DE1E43B46200443F96 /* Placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Placeholder@2x.png"; sourceTree = "<group>"; };
+		7C4056E11E43B5F100443F96 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7C4056E21E43B5F100443F96 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		E66C641746A78C31521B13B6 /* Pods-ImageSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageSearch/Pods-ImageSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		F8DC02EE74461123036B27FE /* libPods-ImageSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,7 +128,8 @@
 		7C4056621E426EC700443F96 /* ImageSearch */ = {
 			isa = PBXGroup;
 			children = (
-				7C4056D41E42CF9400443F96 /* Resources */,
+				7C4056E01E43B48200443F96 /* Utility */,
+				7C4056DD1E43B46200443F96 /* Resources */,
 				7C4056BB1E42881F00443F96 /* Application */,
 				7C4056BC1E42881F00443F96 /* WebHttpClient */,
 				7C4056BD1E42881F00443F96 /* Views */,
@@ -221,11 +227,21 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		7C4056D41E42CF9400443F96 /* Resources */ = {
+		7C4056DD1E43B46200443F96 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C4056DE1E43B46200443F96 /* Placeholder@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C4056E01E43B48200443F96 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7C4056E11E43B5F100443F96 /* Constants.h */,
+				7C4056E21E43B5F100443F96 /* Constants.m */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		B279DECA11F20A457304BC15 /* Frameworks */ = {
@@ -356,6 +372,7 @@
 			files = (
 				7C4056761E426EC700443F96 /* LaunchScreen.storyboard in Resources */,
 				7C4056731E426EC700443F96 /* Assets.xcassets in Resources */,
+				7C4056DF1E43B46200443F96 /* Placeholder@2x.png in Resources */,
 				7C4056DC1E438B7600443F96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +454,7 @@
 				7C4056651E426EC700443F96 /* main.m in Sources */,
 				7C4056D31E42C57300443F96 /* SearchImageDetails.m in Sources */,
 				7C4056CE1E429E9E00443F96 /* ImageSearchSharedClient.m in Sources */,
+				7C4056E31E43B5F100443F96 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

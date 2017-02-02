@@ -16,6 +16,8 @@
 
 @implementation DetailViewController
 
+#pragma mark <ViewLifeCycle>
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.albumDetails.delegate= self;
@@ -33,6 +35,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+/**
+ 
+ @method
+ 
+ setImageForView
+ 
+ @discussion This method set the Image accesed from SearchViewController.
+ 
+ */
+
+#pragma mark <setImageForView>
 
 -(void)setImageForView{
     
@@ -59,9 +73,13 @@
 
 }
 
+#pragma mark <UITabeViewDelegate>
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 3;
 }
+
+#pragma mark <UITabeViewDataSource>
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = nil;

@@ -25,6 +25,8 @@
 
 static  NSString * const CellIdentifier = @"SearchImageCell";
 
+#pragma mark - <ViewLifeCycle>
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.seachTableView.delegate = self;
@@ -41,8 +43,6 @@ static  NSString * const CellIdentifier = @"SearchImageCell";
 #pragma mark - <UITableViewDelegate>
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-    
     SearchImageDetails *searchImageDetails = [self.images objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"AlbumDetail" sender:searchImageDetails];
     [self.seachTableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -53,8 +53,10 @@ static  NSString * const CellIdentifier = @"SearchImageCell";
     return [self.images count];
 }
 
+#pragma mark - <UITableViewDataSource>
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"cellForRowAtIndexPath");
+    
     SearchImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[SearchImageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -89,6 +91,20 @@ static  NSString * const CellIdentifier = @"SearchImageCell";
     return cell;
 }
 
+
+
+/**
+ 
+ @method
+ 
+ searchClient
+ 
+ @discussion This method will return the singleton calss to be initialized .
+ 
+ */
+
+#pragma mark - <searchClient>
+
 - (id<ImageSearching>)searchClient{
     NSString *searchProviderString = @"ImageSearchSharedClient";
     id<ImageSearching> sharedClient = [NSClassFromString(searchProviderString) sharedClient];
@@ -96,6 +112,21 @@ static  NSString * const CellIdentifier = @"SearchImageCell";
     return sharedClient;
 }
 
+
+/**
+ 
+ @method
+ 
+ loadImagesforScreen:imageCount
+ 
+ @param imageCount imageCount in screen
+ 
+ @discussion This method will call the getLyrics:(NSString*)param success:(ISSuccessBlock)success failure:(ISFailureBlock)failure
+ delegate of ImageSearchSharedCleint for fetching album details .
+ 
+ */
+
+#pragma mark - <loadImagesforScreen:imageCount>
 
 - (void)loadImagesforScreen:(int)imageCount{
     if ([self.searchBar.text isEqualToString:@""]) {
@@ -119,19 +150,6 @@ static  NSString * const CellIdentifier = @"SearchImageCell";
    } failure:^(NSURLSessionDataTask *dataTask, NSError *error) {
        NSLog(@"An error occured while searching for images, %@", [error description]);
    }];
-    
-    [[self searchClient]getLyrics:self.searchBar.text success:^(NSURLSessionDataTask *dataTask, NSArray *lyricsArray) {
-        [weakSelf.lyricsArray addObjectsFromArray:lyricsArray];
-        [self.seachTableView reloadData];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
-
-    } failure:^(NSURLSessionDataTask *datatask, NSError *error) {
-         NSLog(@"An error occured while searching for images, %@", [error description]);
-    }];
-
 }
 
 #pragma mark - <UIsearchBarDelegate>
@@ -144,17 +162,12 @@ static  NSString * const CellIdentifier = @"SearchImageCell";
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    if ([segue.identifier isEqualToString:@"AlbumDetail"]) {
+       if ([segue.identifier isEqualToString:@"AlbumDetail"]) {
         SearchImageDetails *details = sender;
         DetailViewController *detailViewController = segue.destinationViewController;
         detailViewController.deatils = details;
         
     }
 }
-
-
 
 @end

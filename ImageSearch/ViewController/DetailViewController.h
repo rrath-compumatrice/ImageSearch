@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchImageDetails.h"
+#import "ImageSearchDelegate.h"
+
 
 @interface DetailViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
@@ -15,4 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *albumDetails;
 @property (strong, nonatomic)        SearchImageDetails *deatils;
 @property (strong, nonatomic)        NSURL *imageUrl;
+
+- (id<ImageSearching>)searchClient;
+
 @end
