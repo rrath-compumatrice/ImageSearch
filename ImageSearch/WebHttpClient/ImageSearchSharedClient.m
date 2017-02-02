@@ -58,6 +58,18 @@ static NSString * const kImageSearchSharedAPIBaseURLString = @"https://itunes.ap
             }
             
             searchImageDetails.imageURL = [NSURL URLWithString:[jsonDict valueForKeyPath:@"artworkUrl100"]];
+            
+            
+            //Api not returning proper JSON format
+           /* [self getLyrics:param success:^(NSURLSessionDataTask *dataTask, NSArray *lyrics) {
+                NSLog(@"Lyrics is %@",lyrics);
+            } failure:^(NSURLSessionDataTask *datatask, NSError *error) {
+                 NSLog(@"An error occured while searching for lyrics, %@", [error description]);
+            }];
+            
+            */
+            
+            
             [imageArray addObject:searchImageDetails];
         }
        success(operation, imageArray);
