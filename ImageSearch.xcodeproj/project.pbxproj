@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		7C4056651E426EC700443F96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056641E426EC700443F96 /* main.m */; };
-		7C4056681E426EC700443F96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056671E426EC700443F96 /* AppDelegate.m */; };
-		7C40566B1E426EC700443F96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C40566A1E426EC700443F96 /* ViewController.m */; };
-		7C40566E1E426EC700443F96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C40566C1E426EC700443F96 /* Main.storyboard */; };
 		7C4056711E426EC700443F96 /* ImageSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C40566F1E426EC700443F96 /* ImageSearch.xcdatamodeld */; };
 		7C4056731E426EC700443F96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4056721E426EC700443F96 /* Assets.xcassets */; };
 		7C4056761E426EC700443F96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4056741E426EC700443F96 /* LaunchScreen.storyboard */; };
 		7C4056811E426EC700443F96 /* ImageSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056801E426EC700443F96 /* ImageSearchTests.m */; };
 		7C40568C1E426EC700443F96 /* ImageSearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C40568B1E426EC700443F96 /* ImageSearchUITests.m */; };
+		7C4056C21E42883B00443F96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056C11E42883B00443F96 /* AppDelegate.m */; };
+		7C4056C51E42885F00443F96 /* SearchCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056C41E42885F00443F96 /* SearchCollectionViewController.m */; };
+		7C4056C81E42935800443F96 /* SearchImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056C71E42935800443F96 /* SearchImageTableViewCell.m */; };
+		7C4056CE1E429E9E00443F96 /* ImageSearchSharedClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056CD1E429E9E00443F96 /* ImageSearchSharedClient.m */; };
+		7C4056D31E42C57300443F96 /* SearchImageDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056D21E42C57300443F96 /* SearchImageDetails.m */; };
+		7C4056D91E43862500443F96 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4056D81E43862500443F96 /* DetailViewController.m */; };
+		7C4056DC1E438B7600443F96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4056DA1E438B7600443F96 /* Main.storyboard */; };
+		ED259CC3BD8956447E82339A /* libPods-ImageSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DC02EE74461123036B27FE /* libPods-ImageSearch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50D43444BC5FB89C427AC589 /* Pods-ImageSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageSearch/Pods-ImageSearch.release.xcconfig"; sourceTree = "<group>"; };
 		7C4056601E426EC700443F96 /* ImageSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4056641E426EC700443F96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7C4056661E426EC700443F96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7C4056671E426EC700443F96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7C4056691E426EC700443F96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7C40566A1E426EC700443F96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7C40566D1E426EC700443F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C4056701E426EC700443F96 /* ImageSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageSearch.xcdatamodel; sourceTree = "<group>"; };
 		7C4056721E426EC700443F96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C4056751E426EC700443F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +54,22 @@
 		7C4056871E426EC700443F96 /* ImageSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C40568B1E426EC700443F96 /* ImageSearchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageSearchUITests.m; sourceTree = "<group>"; };
 		7C40568D1E426EC700443F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C4056C01E42883B00443F96 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7C4056C11E42883B00443F96 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7C4056C31E42885F00443F96 /* SearchCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCollectionViewController.h; sourceTree = "<group>"; };
+		7C4056C41E42885F00443F96 /* SearchCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCollectionViewController.m; sourceTree = "<group>"; };
+		7C4056C61E42935800443F96 /* SearchImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchImageTableViewCell.h; sourceTree = "<group>"; };
+		7C4056C71E42935800443F96 /* SearchImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchImageTableViewCell.m; sourceTree = "<group>"; };
+		7C4056CC1E429E9E00443F96 /* ImageSearchSharedClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSearchSharedClient.h; sourceTree = "<group>"; };
+		7C4056CD1E429E9E00443F96 /* ImageSearchSharedClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSearchSharedClient.m; sourceTree = "<group>"; };
+		7C4056D01E42C16400443F96 /* ImageSearchDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageSearchDelegate.h; sourceTree = "<group>"; };
+		7C4056D11E42C57300443F96 /* SearchImageDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchImageDetails.h; sourceTree = "<group>"; };
+		7C4056D21E42C57300443F96 /* SearchImageDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchImageDetails.m; sourceTree = "<group>"; };
+		7C4056D71E43862500443F96 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7C4056D81E43862500443F96 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7C4056DB1E438B7600443F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E66C641746A78C31521B13B6 /* Pods-ImageSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageSearch/Pods-ImageSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		F8DC02EE74461123036B27FE /* libPods-ImageSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED259CC3BD8956447E82339A /* libPods-ImageSearch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +105,8 @@
 				7C40567F1E426EC700443F96 /* ImageSearchTests */,
 				7C40568A1E426EC700443F96 /* ImageSearchUITests */,
 				7C4056611E426EC700443F96 /* Products */,
+				BC2E6C060F5E8DCBC18BCB3B /* Pods */,
+				B279DECA11F20A457304BC15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,14 +123,16 @@
 		7C4056621E426EC700443F96 /* ImageSearch */ = {
 			isa = PBXGroup;
 			children = (
-				7C4056661E426EC700443F96 /* AppDelegate.h */,
-				7C4056671E426EC700443F96 /* AppDelegate.m */,
-				7C4056691E426EC700443F96 /* ViewController.h */,
-				7C40566A1E426EC700443F96 /* ViewController.m */,
-				7C40566C1E426EC700443F96 /* Main.storyboard */,
-				7C4056721E426EC700443F96 /* Assets.xcassets */,
-				7C4056741E426EC700443F96 /* LaunchScreen.storyboard */,
+				7C4056D41E42CF9400443F96 /* Resources */,
+				7C4056BB1E42881F00443F96 /* Application */,
+				7C4056BC1E42881F00443F96 /* WebHttpClient */,
+				7C4056BD1E42881F00443F96 /* Views */,
+				7C4056BE1E42881F00443F96 /* Model */,
+				7C4056BF1E42881F00443F96 /* ViewController */,
 				7C4056771E426EC700443F96 /* Info.plist */,
+				7C4056721E426EC700443F96 /* Assets.xcassets */,
+				7C4056DA1E438B7600443F96 /* Main.storyboard */,
+				7C4056741E426EC700443F96 /* LaunchScreen.storyboard */,
 				7C40566F1E426EC700443F96 /* ImageSearch.xcdatamodeld */,
 				7C4056631E426EC700443F96 /* Supporting Files */,
 			);
@@ -143,6 +165,86 @@
 			path = ImageSearchUITests;
 			sourceTree = "<group>";
 		};
+		7C4056BB1E42881F00443F96 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7C4056C01E42883B00443F96 /* AppDelegate.h */,
+				7C4056C11E42883B00443F96 /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7C4056BC1E42881F00443F96 /* WebHttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				7C4056CF1E42C10C00443F96 /* Protocol */,
+				7C4056CC1E429E9E00443F96 /* ImageSearchSharedClient.h */,
+				7C4056CD1E429E9E00443F96 /* ImageSearchSharedClient.m */,
+			);
+			path = WebHttpClient;
+			sourceTree = "<group>";
+		};
+		7C4056BD1E42881F00443F96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C4056C61E42935800443F96 /* SearchImageTableViewCell.h */,
+				7C4056C71E42935800443F96 /* SearchImageTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7C4056BE1E42881F00443F96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C4056D11E42C57300443F96 /* SearchImageDetails.h */,
+				7C4056D21E42C57300443F96 /* SearchImageDetails.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C4056BF1E42881F00443F96 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7C4056C31E42885F00443F96 /* SearchCollectionViewController.h */,
+				7C4056C41E42885F00443F96 /* SearchCollectionViewController.m */,
+				7C4056D71E43862500443F96 /* DetailViewController.h */,
+				7C4056D81E43862500443F96 /* DetailViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7C4056CF1E42C10C00443F96 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7C4056D01E42C16400443F96 /* ImageSearchDelegate.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7C4056D41E42CF9400443F96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B279DECA11F20A457304BC15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8DC02EE74461123036B27FE /* libPods-ImageSearch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC2E6C060F5E8DCBC18BCB3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E66C641746A78C31521B13B6 /* Pods-ImageSearch.debug.xcconfig */,
+				50D43444BC5FB89C427AC589 /* Pods-ImageSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C4056901E426EC700443F96 /* Build configuration list for PBXNativeTarget "ImageSearch" */;
 			buildPhases = (
+				2D91C0A20FB4741135F0D83C /* [CP] Check Pods Manifest.lock */,
 				7C40565C1E426EC700443F96 /* Sources */,
 				7C40565D1E426EC700443F96 /* Frameworks */,
 				7C40565E1E426EC700443F96 /* Resources */,
+				03870243A7D1551E723E6771 /* [CP] Embed Pods Frameworks */,
+				54ABEFFE63436888E1F25982 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,7 +356,7 @@
 			files = (
 				7C4056761E426EC700443F96 /* LaunchScreen.storyboard in Resources */,
 				7C4056731E426EC700443F96 /* Assets.xcassets in Resources */,
-				7C40566E1E426EC700443F96 /* Main.storyboard in Resources */,
+				7C4056DC1E438B7600443F96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,15 +376,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03870243A7D1551E723E6771 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageSearch/Pods-ImageSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D91C0A20FB4741135F0D83C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		54ABEFFE63436888E1F25982 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageSearch/Pods-ImageSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C40565C1E426EC700443F96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C40566B1E426EC700443F96 /* ViewController.m in Sources */,
+				7C4056C51E42885F00443F96 /* SearchCollectionViewController.m in Sources */,
+				7C4056C81E42935800443F96 /* SearchImageTableViewCell.m in Sources */,
+				7C4056C21E42883B00443F96 /* AppDelegate.m in Sources */,
+				7C4056D91E43862500443F96 /* DetailViewController.m in Sources */,
 				7C4056711E426EC700443F96 /* ImageSearch.xcdatamodeld in Sources */,
-				7C4056681E426EC700443F96 /* AppDelegate.m in Sources */,
 				7C4056651E426EC700443F96 /* main.m in Sources */,
+				7C4056D31E42C57300443F96 /* SearchImageDetails.m in Sources */,
+				7C4056CE1E429E9E00443F96 /* ImageSearchSharedClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,20 +472,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7C40566C1E426EC700443F96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C40566D1E426EC700443F96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C4056741E426EC700443F96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7C4056751E426EC700443F96 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7C4056DA1E438B7600443F96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C4056DB1E438B7600443F96 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,23 +583,27 @@
 		};
 		7C4056911E426EC700443F96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E66C641746A78C31521B13B6 /* Pods-ImageSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImageSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swagatika.kiva.ImageSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		7C4056921E426EC700443F96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50D43444BC5FB89C427AC589 /* Pods-ImageSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImageSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swagatika.kiva.ImageSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -511,6 +672,7 @@
 				7C4056921E426EC700443F96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C4056931E426EC700443F96 /* Build configuration list for PBXNativeTarget "ImageSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +681,7 @@
 				7C4056951E426EC700443F96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C4056961E426EC700443F96 /* Build configuration list for PBXNativeTarget "ImageSearchUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +690,7 @@
 				7C4056981E426EC700443F96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
