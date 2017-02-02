@@ -5,7 +5,9 @@ On tableview row click it will navigate to show specific details.
 
 
 This Project is using below dependencies using Cocoapods
+
 1. 'AFNetworking', '~> 2.5'
+
 2. 'MBProgressHUD', '~> 0.8'
 
 
