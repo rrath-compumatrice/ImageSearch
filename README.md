@@ -1,7 +1,7 @@
 # ImageSearch
 
 This is a sample project to search music album details and dispaly them in a tableview.
-This project is demonstartes use of "UITableview" for dispaly of search results, and "Afnetworking" to call the API and JSON parsing of response.
+This project demonstartes use of "UITableview" for dispaly of search results, and "Afnetworking" to call the API and JSON parsing of response.
 
 
 This Project is using below Cocoapods dependencies.
