@@ -9,11 +9,13 @@ This Project is using below Cocoapods dependencies.
 
 'MBProgressHUD', '~> 0.8'
 
-HTTP Client:
+#HTTP Client:
 
 //Response contains music album details.
 
 https://itunes.apple.com/search?term=
+
+
 //Response contains music album lyrics.
 
 2.http://lyrics.wikia.com/api.php?func=getSong&artist=Tom+Waits&song=new+coat+of+paint&fmt=json
